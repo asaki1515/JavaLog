@@ -12,16 +12,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);  // MainActivityクラスがAppCompatActivityクラスからそのまま継承したメソッド
 
         /*7.3*/
-        Dog dog = new Dog("ポチ", 3);     // 名前をポチ、年齢3歳で、Dogのインスタンスdogを作る
+        Dog dog = new Dog("ポチ", 3);     // 名前をポチ、年齢3歳で、Dogのインスタンスを作る
 
         dog.say();  // ポチが吠えます（ログ出力）
-        Log.d("javatest", "犬の名前は" + dog.name + "です。"); // インスタンスdogのnameを呼び出し
-        Log.d("javatest", "犬の年齢は" + dog.age + "歳です。");  // インスタンスdogのageを呼び出し
+        Log.d("javatest", "犬の名前は" + dog.name + "です。");
+        Log.d("javatest", "犬の年齢は" + dog.age + "歳です。");
 
-        Dog dog2 = new Dog("ハチ", 10);   // 名前をハチ、年齢10歳で、Dogインスタンスdog2を作る
-        dog2.say();  // ハチが吠えます（ログ出力）
-        Log.d("javatest", "犬の名前は" + dog2.name + "です。");
-        Log.d("javatest", "犬の年齢は" + dog2.age + "歳です。");
-        // Dogクラスの中の関数sayを使ってもいいし、変数nameとageを使ってもいい
+        Dog.introduce();  // dogインスタンスではなく、Dogクラス側から呼び出している
+        Log.d("javatest", Dog.to_jp + "のクラス変数です。");
     }
 }
