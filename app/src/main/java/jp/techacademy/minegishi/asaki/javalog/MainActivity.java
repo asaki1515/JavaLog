@@ -11,17 +11,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);  // オーバーライドした関数内でAppCompatActivityクラスのonCreateメソッドを呼び出す。引数は上記onCreateメソッドで渡ってきた引数をそのまま渡す
         setContentView(R.layout.activity_main);  // MainActivityクラスがAppCompatActivityクラスからそのまま継承したメソッド
 
-        /*6.2*/
-        int t = total(100, 1000);   // ここでtotalからsumを返してもらう
-        Log.d("javatest", String.valueOf(t));
-    }
+        /*7.3*/
+        Dog dog = new Dog("ポチ", 3);     // 名前をポチ、年齢3歳で、Dogのインスタンスdogを作る
 
-    private int total(int first, int last) {
-        int sum = 0;
-        for (int i = first; i < last; i++)  {
-            sum = sum + i;
-        }
+        dog.say();  // ポチが吠えます（ログ出力）
+        Log.d("javatest", "犬の名前は" + dog.name + "です。"); // インスタンスdogのnameを呼び出し
+        Log.d("javatest", "犬の年齢は" + dog.age + "歳です。");  // インスタンスdogのageを呼び出し
 
-        return sum;
+        Dog dog2 = new Dog("ハチ", 10);   // 名前をハチ、年齢10歳で、Dogインスタンスdog2を作る
+        dog2.say();  // ハチが吠えます（ログ出力）
+        Log.d("javatest", "犬の名前は" + dog2.name + "です。");
+        Log.d("javatest", "犬の年齢は" + dog2.age + "歳です。");
+        // Dogクラスの中の関数sayを使ってもいいし、変数nameとageを使ってもいい
     }
 }
