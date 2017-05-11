@@ -12,16 +12,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);  // MainActivityクラスがAppCompatActivityクラスからそのまま継承したメソッド
 
         /*6.2*/
-        total(50, 1000);
+        int t = total(100, 1000);   // ここでtotalからsumを返してもらう
+        Log.d("javatest", String.valueOf(t));
     }
 
-    private void total(int first, int last) {
+    private int total(int first, int last) {
         int sum = 0;
-        for (int i = first; i <= last; i++)  {
+        for (int i = first; i < last; i++)  {
             sum = sum + i;
         }
 
-        Log.d("javatest", String.valueOf(sum));
-
+        return sum;
     }
 }
