@@ -16,5 +16,10 @@ public class MainActivity extends AppCompatActivity {
 
         human.say();
         human.think();
+
+        Human human2 = new Human("アイフォン", 7, "問題");     // 名前をアイフォン、年齢7歳、問題を考える、でHuman2のインスタンスを作る
+
+        human2.say();
+        human2.think();
     }
 }
