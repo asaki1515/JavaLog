@@ -11,17 +11,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);  // オーバーライドした関数内でAppCompatActivityクラスのonCreateメソッドを呼び出す。引数は上記onCreateメソッドで渡ってきた引数をそのまま渡す
         setContentView(R.layout.activity_main);  // MainActivityクラスがAppCompatActivityクラスからそのまま継承したメソッド
 
-        /*5.6*/
-        int[] points = new int[5];  //配列の定義
-        points[0] = 10;
-        points[1] = 6;
-        points[2] = 15;
-        points[3] = 23;
-        points[4] = 17;
+        /*6.2*/
+        total(50, 1000);
+    }
 
-        for (int i = 0; i < points.length; i++) {
-            Log.d("javatest", String.valueOf(points[i]));
+    private void total(int first, int last) {
+        int sum = 0;
+        for (int i = first; i <= last; i++)  {
+            sum = sum + i;
         }
+
+        Log.d("javatest", String.valueOf(sum));
 
     }
 }
