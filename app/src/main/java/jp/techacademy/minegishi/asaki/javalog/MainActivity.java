@@ -11,18 +11,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);  // オーバーライドした関数内でAppCompatActivityクラスのonCreateメソッドを呼び出す。引数は上記onCreateメソッドで渡ってきた引数をそのまま渡す
         setContentView(R.layout.activity_main);  // MainActivityクラスがAppCompatActivityクラスからそのまま継承したメソッド
 
-        /*5.4*/
-        int num1 = 10 + 5 - 2 * 4 / 2;
-        Log.d("javatest", "10 + 5 - 2 * 4 / 2 = " + String.valueOf(num1));  //文字列同士は+演算子によって連結
+        /*5.5*/
+        int num = 60;
 
-        boolean flag1 = true;
-        boolean flag2 = false;
-        Log.d("javatest", "flag1 && flag2 = " + String.valueOf(flag1 && flag2));
-        Log.d("javatest", "flag1 || flag2 = " + String.valueOf(flag1 || flag2));
+        if (num >= 90) {
+            Log.d("javatest", "優");
+        } else if (num >= 75) {
+            Log.d("javatest", "良");
+        } else if (num >= 60) {
+            Log.d("javatest", "可");
+        } else {
+            Log.d("javatest", "不可");
+        }
 
-        int num2 = 10;
-        int num3 = 20;
-        Log.d("javatest", "num2 < num3 = " + String.valueOf(num2 < num3));
-        
+        int drink = 1;
+
+        switch (drink) {
+            case 0:
+                Log.d("javatest", "コーヒーを注文しました");
+                break;
+            case 1:
+                Log.d("javatest", "紅茶を注文しました");
+                break;
+            case 2:
+                Log.d("javatest", "ミルクを注文しました");
+                break;
+            default:
+                Log.d("javatest", "オーダーミスです");
+                break;
+        }
+
     }
 }
